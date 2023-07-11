@@ -1,3 +1,4 @@
+# 2.各種グラフ及び地図の描画
 import streamlit as st
 import folium
 from streamlit_folium import folium_static
