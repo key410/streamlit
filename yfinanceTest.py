@@ -1,3 +1,4 @@
+# 3.各種グラフ及び地図の描画
 import pandas as pd
 import yfinance as yf
 import streamlit as st
@@ -6,7 +7,7 @@ import streamlit_extras.altex as ste
 # 銘柄を指定
 ticker = ["7203.T", "AMZN", "AAPL"]
 
-# 銘柄毎に株価を取得して
+# 銘柄毎に株価を取得
 for tic in ticker :
     brand = yf.Ticker(tic)
     tmp = brand.history(period = "max")
@@ -19,7 +20,7 @@ for tic in ticker :
     else :
         hist = tmp
 
-
+# 各種グラフの出力
 ste.line_chart(
     data=hist.query("symbol == 'AMZN'"),
     x="Date",
